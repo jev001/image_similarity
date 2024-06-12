@@ -15,39 +15,19 @@
         <javacpp.version>1.5.10</javacpp.version>
         <opencv.version>4.9.0-${javacpp.version}</opencv.version>
         <openblas.version>0.3.26-${javacpp.version}</openblas.version>
-        <!--   按需配置,选择macosx,linux,windows     -->
-        <javacpp.platform>macosx-x86_64</javacpp.platform>
-<!--        <javacv.platform.version>macosx-arm64</javacv.platform.version>-->
-<!--        <javacv.platform.version>windows-x86_64</javacv.platform.version>-->
-<!--        <javacv.platform.version>linux-x86_64</javacv.platform.version>-->
+
     </properties>
 
 
     <dependencies>
+        <!-- https://github.com/bytedeco/javacpp-presets#downloads -->
+        <!-- mvn打包的时候增加条件可以只打包指定平台的依赖包  mvn package -Djavacpp.platform=macosx-x86_64-->
 
         <dependency>
             <groupId>org.bytedeco</groupId>
-            <artifactId>openblas</artifactId>
-            <version>${openblas.version}</version>
+            <artifactId>javacv-platform</artifactId>
+            <version>1.5.10</version>
         </dependency>
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>opencv</artifactId>
-            <version>${opencv.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>openblas</artifactId>
-            <version>${openblas.version}</version>
-            <classifier>${javacpp.platform}</classifier>
-        </dependency>
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>opencv</artifactId>
-            <version>${opencv.version}</version>
-            <classifier>${javacpp.platform}</classifier>
-        </dependency>
-<!--        Unresolved dependency: 'org.bytedeco:opencv:jar:4.9.0-1.5.10'-->
         <dependency>
             <groupId>com.github.jelmerk</groupId>
             <artifactId>hnswlib-core</artifactId>
