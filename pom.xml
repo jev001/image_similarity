@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>untitled</artifactId>
+    <artifactId>image_similarity</artifactId>
     <name>Archetype - untitled</name>
     <url>http://maven.apache.org</url>
     <groupId>yunji</groupId>
@@ -15,7 +15,6 @@
         <javacpp.version>1.5.10</javacpp.version>
         <opencv.version>4.9.0-${javacpp.version}</opencv.version>
         <openblas.version>0.3.26-${javacpp.version}</openblas.version>
-
     </properties>
 
 
@@ -28,6 +27,8 @@
             <artifactId>javacv-platform</artifactId>
             <version>1.5.10</version>
         </dependency>
+
+        <!--  搜索存储      -->
         <dependency>
             <groupId>com.github.jelmerk</groupId>
             <artifactId>hnswlib-core</artifactId>
@@ -38,6 +39,13 @@
             <groupId>com.github.jelmerk</groupId>
             <artifactId>hnswlib-utils</artifactId>
             <version>${hnswlib.version}</version>
+        </dependency>
+
+        <!--   图表展示     -->
+        <dependency>
+            <groupId>org.jgrapht</groupId>
+            <artifactId>jgrapht-core</artifactId>
+            <version>1.5.1</version>
         </dependency>
     </dependencies>
 
