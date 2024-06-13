@@ -2,7 +2,7 @@
 
 ## 图片特征提取
 
-常见判断相似, 可以计算它们的指纹信息,比如md5,hash等 
+常见判断相似, 可以计算它们的指纹信息,比如md5,hash等
 
 本文中使用javacv中phash计算,  
 PS: javacv为opencv的套壳, javacv是javacpp中的一部分, javacpp将常见的需要c/c++库和java进行绑定
@@ -122,46 +122,46 @@ PS: 图片指纹和图片特征有区别
 >>Haar 特征
 >>傅里叶变换特征
 >>直方图of梯度（HOG）
->>这些特征提取方法各有优缺点,适用于不同的场景和任务。例如,基于像素的方法简单易实现,但对噪声和变形敏感;基于关键点的方法对图像变换和部分遮挡较为鲁棒,但需要进行关键点检测和描述;深度学习方法可以自动学习到更加丰富的特征,但需要大量的训练数据和计算资源。  
+>>这些特征提取方法各有优缺点,适用于不同的场景和任务。例如,基于像素的方法简单易实现,但对噪声和变形敏感;基于关键点的方法对图像变换和部分遮挡较为鲁棒,但需要进行关键点检测和描述;深度学习方法可以自动学习到更加丰富的特征,但需要大量的训练数据和计算资源。
 >
-> 
+>
 >具体选择哪种方法,需要根据具体的应用场景、数据特点和计算资源等因素进行权衡和选择。
-> 
-> 
->图像指纹算法和图像特征提取算法虽然都是用于处理图像的技术,但它们之间有一些明显的区别:   
+>
+>
+>图像指纹算法和图像特征提取算法虽然都是用于处理图像的技术,但它们之间有一些明显的区别:
 >>目标不同:  
 >>图像指纹算法的目标是生成一个简洁、紧凑的图像指纹或哈希值,用于图像相似性比较和重复图像检测。  
 >>图像特征提取算法的目标是提取图像中的有意义特征,如颜色、纹理、形状等,用于图像识别、分类等任务。
-> 
+>
 >>算法原理不同:  
 >>图像指纹算法通常基于计算图像的统计量、频域特征等,生成稳健的二进制指纹。  
 >>图像特征提取算法则更关注从图像中提取有语义的特征向量,如 SIFT、HOG 等。
-> 
+>
 >>输出形式不同:  
 >>图像指纹算法输出一个紧凑的二进制数字,如 64 位或 128 位。  
 >>图像特征提取算法输出一个特征向量,维度取决于所提取的特征数量。
-> 
+>
 >>应用场景不同:  
 >>图像指纹算法主要用于图像相似性比较、重复图像检测等。  
 >>图像特征提取算法则广泛应用于图像分类、检测、检索等任务中。  
->>总的来说,图像指纹算法注重生成一种紧凑、稳健的图像识别码,而图像特征提取算法关注从图像中提取有意义的特征表示。两种技术各有特点,可以根据具体应用场景和需求选择合适的方法。  
+>>总的来说,图像指纹算法注重生成一种紧凑、稳健的图像识别码,而图像特征提取算法关注从图像中提取有意义的特征表示。两种技术各有特点,可以根据具体应用场景和需求选择合适的方法。
 
 
 
 ## 参考链接
 
 javacv https://github.com/bytedeco/javacv  
-javacpp项目 https://bytedeco.org/  
+javacpp项目 https://bytedeco.org/
 
 opencv https://opencv.org/  
 phash算法opencv实现 https://github.com/opencv/opencv_contrib/blob/4.x/modules/img_hash/src/phash.cpp  
 图片相似算法 https://zhuanlan.zhihu.com/p/88696520  
-java实现PHash https://chatgpt.com/share/f122cd73-c04d-4111-9be4-764c245cf039  
+java实现PHash https://chatgpt.com/share/f122cd73-c04d-4111-9be4-764c245cf039
 
 
 opencv计算汉明距离实现  
 https://docs.opencv.org/3.4/d2/de8/group__core__array.html  
-https://docs.opencv.org/3.4/d3/d59/structcv_1_1Hamming.html  
+https://docs.opencv.org/3.4/d3/d59/structcv_1_1Hamming.html
 
 
 hnsw向量数据库  
@@ -172,3 +172,5 @@ ES向量搜索(es7.x 需要安装插件) https://cloud.tencent.com/document/prod
 ES向量插件 https://github.com/alexklibisz/elastiknn
 ES向量插件 https://github.com/opendistro-for-elasticsearch/k-NN
 ANNS:HNSW算法详解 https://songlinlife.github.io/2022/%E6%95%B0%E6%8D%AE%E5%BA%93/Efficient-and-robust-approximate-nearest-neighbor-search-using-Hierarchical-Navigable-Small-World-graphs/  
+给ES插上向量检索的翅膀 https://elasticsearch.cn/uploads/slides/20230712/8a35e71ef17841657a3148ec8d3a6713.pdf
+HNSW图的构建（Lucene 9.8.0） https://amazingkoala.com.cn/Lucene/Index/2024/0118/HNSW%E5%9B%BE%E7%9A%84%E6%9E%84%E5%BB%BA/
